@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "e6347cae-1a14-460c-930c-2f2310ae65cc",
+		"name": "API-LIBRI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USUARIO",
+			"item": [
+				{
+					"name": "cadastrarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"ANA\",\r\n    \"sobrenome\":\"DA SILVA\",\r\n    \"email\":\"ana.silva@gmail.comn\",\r\n    \"foto\":\"IMAGEM DE USUÁRIO\",\r\n    \"login\":\"ana\",\r\n    \"senha\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_libri}}/usuario/cadastrarUsuario",
+							"host": [
+								"{{url_libri}}"
+							],
+							"path": [
+								"usuario",
+								"cadastrarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_libri}}/usuario/listarUsuario/cristiano/123456",
+							"host": [
+								"{{url_libri}}"
+							],
+							"path": [
+								"usuario",
+								"listarUsuario",
+								"cristiano",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LIVRO",
+			"item": [
+				{
+					"name": "cadastrarLivro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"A REVOLTA DE ATALS\",\r\n    \"descricao\":\"A história se passa numa época imprecisa, quando as forças políticas de esquerda estão no poder. Último baluarte do que ainda resta do capitalismo num mundo infestado de repúblicas populares, os Estados Unidos estão em decadência e sua economia caminha para o colapso. Nesse cenário desolador em que a intervenção estatal se sobrepõe a qualquer iniciativa privada de reerguer a economia, os principais líderes da indústria, do empresariado, das ciências e das artes começam a sumir sem deixar pistas. Com medidas arbitrárias e leis manipuladas, o Estado logo se apossa de suas propriedades e invenções, mas não é capaz de manter a lucratividade de seus negócios.\",\r\n    \"imagem\":\"IMAGEM DO LIVRO\",\r\n    \"tblUsuarioCodUsuario\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_libri}}/livro/cadastrarLivro",
+							"host": [
+								"{{url_libri}}"
+							],
+							"path": [
+								"livro",
+								"cadastrarLivro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarLivro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_libri}}/livro/listarLivro",
+							"host": [
+								"{{url_libri}}"
+							],
+							"path": [
+								"livro",
+								"listarLivro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluirLivro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_libri}}/livro/excluirLivro/2",
+							"host": [
+								"{{url_libri}}"
+							],
+							"path": [
+								"livro",
+								"excluirLivro",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alterarLivro",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\":\"-A REVOLTA DE ATALS\",\r\n    \"descricao\":\"-A história se passa numa época imprecisa, quando as forças políticas de esquerda estão no poder. Último baluarte do que ainda resta do capitalismo num mundo infestado de repúblicas populares, os Estados Unidos estão em decadência e sua economia caminha para o colapso. Nesse cenário desolador em que a intervenção estatal se sobrepõe a qualquer iniciativa privada de reerguer a economia, os principais líderes da indústria, do empresariado, das ciências e das artes começam a sumir sem deixar pistas. Com medidas arbitrárias e leis manipuladas, o Estado logo se apossa de suas propriedades e invenções, mas não é capaz de manter a lucratividade de seus negócios.\",\r\n    \"imagem\":\"-IMAGEM DO LIVRO\",\r\n    \"tblUsuarioCodUsuario\":2,\r\n    \"cod_livro\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_libri}}/livro/alterarLivro",
+							"host": [
+								"{{url_libri}}"
+							],
+							"path": [
+								"livro",
+								"alterarLivro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
